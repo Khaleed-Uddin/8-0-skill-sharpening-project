@@ -11,7 +11,15 @@
  *  //> 25
  *  (3 + 4 + 5 + 6 + 7 = 25)
  */
-function rangeSum(min, max) {}
+function rangeSum(min, max) {
+  let array = [ ];
+  let sum = 0;
+  for(i = min; i <= max; i++){
+    array.push(i);
+    sum += i;
+  }
+  return sum;
+}
 
 /**
  * rangeOdd()
@@ -25,7 +33,15 @@ function rangeSum(min, max) {}
  *  rangeOdd(10, 15);
  *  //> [ 15, 13, 11 ]
  */
-function rangeOdd(min, max) {}
+function rangeOdd(min, max) {
+let array = [ ];
+for(i = min; i <= max; i++){
+  if(i%2 !== 0){
+  array.push(i);
+  }
+}
+return array;
+}
 
 /**
  * rangeEveryOther()
@@ -61,7 +77,18 @@ function rangeEveryOther(min, max) {}
  *  containsWhileLoop([ "left", "up", "right" ], "down");
  *  //> false
  */
-function containsWhileLoop(array, target) {}
+function containsWhileLoop(array, target) {
+  let i = 0;
+  while (i < array.length){
+    if(array[i] === target){
+      return true;
+    } else {
+      return false;
+    }
+    i++;
+  }
+
+}
 
 /**
  * containsForLoop()
@@ -83,7 +110,15 @@ function containsWhileLoop(array, target) {}
  *  containsForLoop([ "left", "up", "right" ], "down");
  *  //> false
  */
-function containsForLoop(array, target) {}
+function containsForLoop(array, target) {
+  for(i = 0; i < array.length; i++){
+    if(array[i] === target){
+      return true;
+    }else{
+      return false;
+    }
+  }
+}
 
 /**
  * targetCount()
@@ -97,7 +132,15 @@ function containsForLoop(array, target) {}
  *  targetCount([ 10, 20, 10, 20, 30 ], 10);
  *  //> 2
  */
-function targetCount(array, target) {}
+function targetCount(array, target) {
+  let numOfTimes = 0;
+  for(i = 0; i < array.length; i++){
+    if(array[i] === target){
+      numOfTimes ++;
+    }
+  }
+  return numOfTimes;
+}
 
 /**
  * firstIndexFound()
@@ -117,7 +160,15 @@ function targetCount(array, target) {}
  *  firstIndexFound([ "left", "right", "left" ], "up");
  *  //> -1
  */
-function firstIndexFound(array, target) {}
+function firstIndexFound(array, target) {
+  for(i = 0; i < array.length; i++){
+    if(array[i] === target){
+      return i;
+    }else {
+      return -1;
+    }
+  }
+}
 
 /**
  * lastIndexFound()
@@ -137,7 +188,15 @@ function firstIndexFound(array, target) {}
  *  lastIndexFound([ "left", "right", "left" ], "up");
  *  //> -1
  */
-function lastIndexFound(array, target) {}
+function lastIndexFound(array, target) {
+  for(i = array.length - 1; i >= 0; i--){
+    if(array[i] === target){
+      return i;
+    }else{
+      return -1;
+    }
+  }
+}
 
 /**
  * timesIndex()
@@ -151,7 +210,13 @@ function lastIndexFound(array, target) {}
  *  //> [ 7 * 0, 10 * 1, 11 * 2 ]
  *  //> [ 0, 10, 22 ]
  */
-function timesIndex(array) {}
+function timesIndex(array) {
+  elements = [];
+  for(i = 0; i < array.length; i++){
+elements.push(i * array[i]);
+  }
+return elements;
+}
 
 /**
  * cumulativeSum()
@@ -165,7 +230,15 @@ function timesIndex(array) {}
  *  //> [ 5, 5 + 2, 5 + 2 + 9 ]
  *  //> [ 5, 7, 16 ]
  */
-function cumulativeSum(array) {}
+function cumulativeSum(array) {
+  let sum = [ ];
+  for(i = 0; i < array.length; i++){
+sum.push(array[i] += array[i + 1]);
+  }
+  return sum;
+}
+
+
 
 // Do not change anything below this line.
 module.exports = {
